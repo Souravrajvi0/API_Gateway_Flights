@@ -8,6 +8,7 @@ async function createUser(data) {
         return user;
 
     }catch(error){
+        console.error(error)
         if(error.name == 'SequelizeValidationError'){
             let explanation = []
             error.errors.forEach(ere => {
